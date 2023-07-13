@@ -25,5 +25,26 @@ class Client
     }
 }
 
+class Employee
+{
+    public $name;
+
+    public function __construct($name)
+    {
+        $this->name = $name;
+    }
+}
+
+class Order
+{
+    public $id;
+    public $item;
+
+    public function __construct($id, $item)
+    {
+        $this->id = $id;
+        $this->item = $item;
+    }
+}
 
 ?>
