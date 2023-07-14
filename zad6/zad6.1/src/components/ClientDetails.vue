@@ -14,13 +14,28 @@ export default {
   props: ['id'],
   data() {
     return {
-      client: {},
+      client: {
+        id: this.id,
+        name: '',
+        employee: '',
+        lastPurchases: [],
+        totalSpendings: 0,
+        car: '',
+      },
     };
   },
   created() {
-    // W tym miejscu pobierz informacje o kliencie na podstawie przekazanego ID
-    // np. za pomocą zapytania do API lub pobierając dane z lokalnego magazynu danych
-    this.client = { id: this.id, name: 'John', employee: 'Alice', lastPurchases: [], totalSpendings: 0, car: 'Car A' };
+    // Fetch client details based on the provided ID
+    // You can make an API request or fetch data from a local data store
+    // Here, I'm using dummy data for demonstration purposes
+    this.client = {
+      id: this.id,
+      name: 'John',
+      employee: 'Alice',
+      lastPurchases: ['Item 1', 'Item 2', 'Item 3'],
+      totalSpendings: 500,
+      car: 'Car A',
+    };
   },
 };
 </script>
